@@ -18,19 +18,8 @@ class Luis:
         }
 
     def query(self, question):
-        # params = urllib.urlencode({'q':question})
         quoted_question = urllib.quote(question)
         try:
-            url = 'https://api.projectoxford.ai/luis/v1/application/'
-            # values = {
-            #     'id': self.appid,
-            #     'subscription-key': self.subscriptionkey,
-            #     'q': question,
-            # }
-            # data = urllib.urlencode(values)
-            # req = urllib2.Request(url, data)
-            # response = urllib2.urlopen(req)
-
             conn = httplib.HTTPSConnection('api.projectoxford.ai')
             query = '/luis/v1/application?id=' + self.appid + '&subscription-key=' + self.subscriptionkey + '&q=' + quoted_question
             conn.request("POST", query, "{body}", self.headers)
@@ -52,9 +41,17 @@ class Socrates:
     def ask(self, question):
         return self.luis.query(question)
 
+    def Chat(self):
+        keep_chatting = True
+        print 'Type your question here. Type "quit" to quit'
+        while keep_chatting:
+            question = raw_input()
+            print self.ask(question)
+            if question == 'quit':
+                keep_chatting = False
+
 
 if __name__ == '__main__':
     bot = Socrates()
     bot.Initialize()
-    reply = bot.ask("I want to learn about Electrostatics")
-    print reply
+    bot.Chat()
