@@ -21,7 +21,8 @@ class Luis:
         quoted_question = urllib.quote(question)
         try:
             conn = httplib.HTTPSConnection('api.projectoxford.ai')
-            query = '/luis/v1/application?id=' + self.appid + '&subscription-key=' + self.subscriptionkey + '&q=' + quoted_question
+            query = '/luis/v1/application?id=' + self.appid + '&subscription-key=' \
+                    + self.subscriptionkey + '&q=' + quoted_question
             conn.request("POST", query, "{body}", self.headers)
             response = conn.getresponse()
             data = response.read()
@@ -45,7 +46,7 @@ class Socrates:
         keep_chatting = True
         print 'Type your question here. Type "quit" to quit'
         while keep_chatting:
-            question = raw_input()
+            question = input('You:')
             print self.ask(question)
             if question == 'quit':
                 keep_chatting = False
