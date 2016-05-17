@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbbb298-3957-4868-9bb2-bae76ef332e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Action.py" afterPath="$PROJECT_DIR$/Action.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brain.py" afterPath="$PROJECT_DIR$/Brain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Luis.py" afterPath="$PROJECT_DIR$/Luis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Socrates.py" afterPath="$PROJECT_DIR$/Socrates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_Socrates.py" afterPath="$PROJECT_DIR$/test_Socrates.py" />
     </list>
     <ignored path="EducationBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="Socrates.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Socrates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -38,8 +39,8 @@
       <file leaf-file-name="Brain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Brain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -57,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_Socrates.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_Socrates.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_Socrates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -72,8 +73,8 @@
       <file leaf-file-name="Action.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Action.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -81,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Luis.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Luis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Luis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+            <state relative-caret-position="432">
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -139,11 +140,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/key.txt" />
+        <option value="$PROJECT_DIR$/Luis.py" />
         <option value="$PROJECT_DIR$/Action.py" />
         <option value="$PROJECT_DIR$/Socrates.py" />
-        <option value="$PROJECT_DIR$/Luis.py" />
-        <option value="$PROJECT_DIR$/test_Socrates.py" />
         <option value="$PROJECT_DIR$/Brain.py" />
+        <option value="$PROJECT_DIR$/test_Socrates.py" />
       </list>
     </option>
   </component>
@@ -424,6 +425,9 @@
     <history-entry file="Nosetest_TestSocrates_test_I_want_to_learn_about_mars_reply_greater_than_0 - 2016.05.16 at 17h 21m 06s.xml">
       <configuration name="Nosetest TestSocrates.test_I_want_to_learn_about_mars_reply_greater_than_0" configurationId="tests" />
     </history-entry>
+    <history-entry file="Nosetest_TestSocrates_test_I_want_to_learn_about_mars_reply_greater_than_0 - 2016.05.16 at 17h 32m 52s.xml">
+      <configuration name="Nosetest TestSocrates.test_I_want_to_learn_about_mars_reply_greater_than_0" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1216" extended-state="6" />
@@ -519,10 +523,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Luis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Action.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Socrates.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -535,42 +559,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_Socrates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Action.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Brain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Luis.py">
+    <entry file="file://$PROJECT_DIR$/test_Socrates.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        <state relative-caret-position="126">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

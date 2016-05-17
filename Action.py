@@ -10,7 +10,7 @@ class ActionList(Enum):
 
 
 class Action():
-    def act(self, action, topic):
+    def act(self, action, topic, keep_chatting):
 
         if (action == ActionList.AskQuestion):
             return "What is " + topic + "?"
@@ -22,4 +22,5 @@ class Action():
             return "Sorry I did not understand what " + topic + "means."
 
         if (action == ActionList.Quit):
+            keep_chatting = False
             return "Goodbye"
