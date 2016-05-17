@@ -1,4 +1,4 @@
-import httplib
+import urllib2
 import urllib
 import json
 
@@ -6,6 +6,7 @@ class Luis:
     def __init__(self):
         self.appid = ''
         self.subscriptionkey = ''
+        self.initialize()
 
     def initialize(self):
         with open('key.txt', 'r') as f:
@@ -17,20 +18,22 @@ class Luis:
             'Ocp-Apim-Subscription-Key': self.subscriptionkey,
         }
 
-    def query(self, question):
+    def get_intent_and_entity(self, question):
         quoted_question = urllib.quote(question)
+
         try:
-            conn = httplib.HTTPSConnection('api.projectoxford.ai')
-            query = '/luis/v1/application?id=' + self.appid + '&subscription-key=' \
+            url_luis = 'https://api.projectoxford.ai/luis/v1/application?id=' + self.appid + '&subscription-key=' \
                     + self.subscriptionkey + '&q=' + quoted_question
-            conn.request("POST", query, "{body}", self.headers)
-            response = conn.getresponse()
-            data = response.read()
-            conn.close()
-            return self.decode_json(data)
+            response = urllib2.urlopen(url_luis)
+            json = response.read()
+            return self.decode_json(json)
+
         except Exception as e:
-            print("[Errno {0}] {1}".format(e.errno, e.strerror))
-            return 0
+            print 'Error ', e.message
+            return 'quit', ''
 
     def decode_json(self, luis_reply):
-        return json.loads(luis_reply)
+        luis_full = json.loads(luis_reply)
+        intent = luis_full['intents'][0]['intent']
+        entity = luis_full['entities'][0]['entity']
+        return intent, entity
