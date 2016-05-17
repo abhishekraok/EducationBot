@@ -12,10 +12,10 @@ class Brain:
         self.luis.initialize()
 
     def intent_to_action(self, intent):
-        if intent == 'Learn':
+        if intent.lower() == 'learn':
             return ActionList.Clarify
 
-        if intent == 'quit':
+        if intent.lower() == 'quit':
             return ActionList.Quit
 
         return ActionList.DidNotUnderstand
@@ -27,4 +27,6 @@ class Brain:
             user_sentence = raw_input('You:')
             intent, topic = self.luis.get_intent_and_entity(user_sentence)
             action = self.intent_to_action(intent)
-            print self.acter.act(action, topic, keep_chatting)
+            print self.acter.act(action, topic)
+            if action == ActionList.Quit:
+                keep_chatting = False

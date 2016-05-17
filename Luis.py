@@ -35,5 +35,5 @@ class Luis:
     def decode_json(self, luis_reply):
         luis_full = json.loads(luis_reply)
         intent = luis_full['intents'][0]['intent']
-        entity = luis_full['entities'][0]['entity']
+        entity = luis_full['entities'][0]['entity'] if len(luis_full['entities']) > 0 else ''
         return intent, entity
