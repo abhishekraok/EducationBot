@@ -1,5 +1,6 @@
 import unittest
 from Socrates import Socrates
+from State import StateCollection, State
 
 
 class TestSocrates(unittest.TestCase):
@@ -8,6 +9,12 @@ class TestSocrates(unittest.TestCase):
         bot = Socrates()
         reply = bot.brain.ask(question)
         self.assertGreater(len(reply), 20)
+
+    def test_StateCollection_loads(self):
+        states = StateCollection()
+        states.load('test_states.json')
+        self.assertTrue(len(states.states) > 0)
+        self.assertEqual(states.states['first_state'].state_name, 'first_state')
 
 
 if __name__ == '__main__':

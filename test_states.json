@@ -1,0 +1,14 @@
+{
+  "states": [
+    {
+      "next_distribution": [ "0.8", "0.2" ],
+      "state_name": "first_state",
+      "following_states": [ "first_state", "second_state" ]
+    },
+    {
+      "next_distribution": [ "0.8", "0.2" ],
+      "state_name": "second_state",
+      "following_states": [ "first_state", "second_state" ]
+    }
+  ]
+}

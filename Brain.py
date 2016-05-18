@@ -1,5 +1,6 @@
-from  Luis import Luis
 from Action import Action, ActionList
+from  Luis import Luis
+from State import State, StateCollection
 
 
 class Brain:
@@ -7,9 +8,15 @@ class Brain:
         self.luis = Luis()
         self.acter = Action()
         self.initialize()
+        self.current_state = State()
+        self.state_manager = StateCollection()
+        self.state_manager.load('states.json')
 
     def initialize(self):
         self.luis.initialize()
+
+    def intent_to_state(self, intent):
+        self.current_state = self.current_state.next_state(intent)
 
     def intent_to_action(self, intent):
         if intent.lower() == 'learn':
