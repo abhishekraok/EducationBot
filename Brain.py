@@ -8,9 +8,9 @@ class Brain:
         self.luis = Luis()
         self.acter = Action()
         self.initialize()
-        self.current_state = State()
         self.state_manager = StateCollection()
         self.state_manager.load('states.json')
+        self.current_state = self.state_manager.starting_state()
 
     def initialize(self):
         self.luis.initialize()

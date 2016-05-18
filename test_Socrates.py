@@ -14,8 +14,11 @@ class TestSocrates(unittest.TestCase):
         states = StateCollection()
         states.load('test_states.json')
         self.assertTrue(len(states.states) > 0)
-        self.assertEqual(states.states['first_state'].state_name, 'first_state')
 
+    def test_StateCollection_first_state(self):
+        states = StateCollection()
+        states.load('test_states.json')
+        self.assertEqual(states.states['first_state'].state_name, 'first_state')
 
 if __name__ == '__main__':
     unittest.main()
