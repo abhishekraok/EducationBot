@@ -1,6 +1,8 @@
 import json
 import random
 
+from Action import StateFunctions
+
 
 class State():
     def __init__(self):
@@ -27,6 +29,10 @@ class StateCollection:
         for json_state in self.decoded['states']:
             new_state = State()
             new_state.state_name = json_state['state_name']
+            if(not callable(getattr(StateFunctions, new_state.state_name))):
+                message = 'The state ' + new_state.state_name + ' has no method associated with it'
+                print message
+                raise Exception(message)
             new_state.following_states = json_state['following_states']
             new_state.next_distribution = json_state['next_distribution']
             self.states[new_state.state_name] = new_state
@@ -34,3 +40,5 @@ class StateCollection:
     def starting_state(self):
         # There should always be a start
         return self.states['start']
+
+

@@ -2,18 +2,41 @@
   "states": [
     {
       "state_name": "start",
-      "next_distribution": [ 1 ],
-      "following_states": [ "greet" ]
+      "next_distribution": [
+        1
+      ],
+      "following_states": [
+        "greet"
+      ]
     },
     {
       "state_name": "greet",
-      "next_distribution": [ 1 ],
-      "following_states": [ "choose_topic" ]
+      "next_distribution": [
+        1
+      ],
+      "following_states": [
+        "choose_topic"
+      ]
     },
     {
       "state_name": "choose_topic",
-      "next_distribution": [ 0.8, 0.2 ],
-      "following_states": [ "greet", "start" ]
+      "next_distribution": [
+        0.8,
+        0.2
+      ],
+      "following_states": [
+        "quit",
+        "start"
+      ]
+    },
+    {
+      "state_name": "quit",
+      "next_distribution": [
+        1
+      ],
+      "following_states": [
+        "quit"
+      ]
     }
   ]
 }

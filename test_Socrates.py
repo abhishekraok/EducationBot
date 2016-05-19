@@ -1,6 +1,7 @@
 import unittest
 from Socrates import Socrates
-from State import StateCollection, State
+from State import StateCollection, State, StateFunctions
+from Action import Action, StateFunctions
 
 
 class TestSocrates(unittest.TestCase):
@@ -19,6 +20,12 @@ class TestSocrates(unittest.TestCase):
         states = StateCollection()
         states.load('test_states.json')
         self.assertEqual(states.states['first_state'].state_name, 'first_state')
+
+    def test_Acter_acts_state_greets(self):
+        acter = Action()
+        result = acter.act_state('greet')
+        self.assertEqual(result.success, True)
+        self.assertGreater(len(result.value), 5)
 
 if __name__ == '__main__':
     unittest.main()
