@@ -67,3 +67,8 @@ class StateFunctions():
     @staticmethod
     def second_state():
         return Result(True, '', '')
+
+    @staticmethod
+    def quit():
+        Action.say('Bye bye')
+        return Result(True, '', '')

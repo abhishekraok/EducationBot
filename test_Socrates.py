@@ -1,6 +1,6 @@
 import unittest
 from Socrates import Socrates
-from State import StateCollection, State, StateFunctions
+from State import StateCollection, State
 from Action import Action, StateFunctions
 
 

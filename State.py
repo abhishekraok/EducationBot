@@ -21,7 +21,7 @@ class StateCollection:
     def next_state(self, current_state_name, intent):
         current_state = self.states[current_state_name]
         next_states_list = current_state.following_states
-        return random.choice[next_states_list]
+        return random.choice(next_states_list)
 
     def load(self, json_states_file):
         with open(json_states_file, 'r') as f:
@@ -37,8 +37,8 @@ class StateCollection:
             new_state.next_distribution = json_state['next_distribution']
             self.states[new_state.state_name] = new_state
 
-    def starting_state(self):
+    def starting_state_name(self):
         # There should always be a start
-        return self.states['start']
+        return 'start'
 
 

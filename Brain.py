@@ -10,13 +10,13 @@ class Brain:
         self.acter = Action()
         self.state_manager = StateCollection()
         self.state_manager.load('states.json')
-        self.current_state = self.state_manager.starting_state()
+        self.current_state_name = self.state_manager.starting_state_name()
         with open('txt/intro.txt', 'r') as f:
             self.help_message = f.read()
 
     def step(self):
-        result = self.acter.act_state(self.current_state)
-        self.current_state = self.current_state.next_state(result)
+        result = self.acter.act_state(self.current_state_name)
+        self.current_state_name = self.state_manager.next_state(self.current_state_name, result)
 
     # def intent_to_state(self, intent):
     #     self.current_state = self.current_state.next_state(intent)
@@ -34,8 +34,6 @@ class Brain:
         keep_chatting = True
         print self.help_message
         while keep_chatting:
-            user_sentence = raw_input('You:')
-            intent, topic = self.luis.get_intent_and_entity(user_sentence)
             self.step()
-            if self.current_state == 'quit':
+            if self.current_state_name == 'quit':
                 keep_chatting = False
